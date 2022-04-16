@@ -1,12 +1,14 @@
 import { useState } from 'react'
+import { useUserContext } from './../contexts/UserContextProvider'
 
 const ProfileDropdown = () => {
     const [showDropdown, setShowDropdown] = useState(false);
+    const { user } = useUserContext();
 
     return(
         <div className="relative">
             <img 
-                src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGRvZ3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" 
+                src={user.picture}
                 alt="profile" 
                 className="w-7 h-7 rounded-full object-cover mx-2 cursor-pointer"
                 onClick={() => setShowDropdown(!showDropdown)}
