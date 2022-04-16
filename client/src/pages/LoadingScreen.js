@@ -1,6 +1,6 @@
 const LoadingScreen = () => {
     return(
-        <div className="h-screen bg-gray-100 flex justify-center items-center border">
+        <div className="h-screen bg-gray-50 flex justify-center items-center border">
             <img 
                 src="icons/android-icon-72x72.png" 
                 alt="logo" 

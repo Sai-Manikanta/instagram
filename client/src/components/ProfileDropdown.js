@@ -25,7 +25,7 @@ const ProfileDropdown = () => {
                     className="w-64 shadow-md rounded absolute bg-white right-0 top-12 text-sm"
                     data-testid="profile-dropdown"
                 >
-                    <Link to="/profile" className="hover:bg-gray-100 w-full py-2 px-3 flex items-center">
+                    <Link to={`/${user.name.replace(/ /g, "").toLowerCase()}`} className="hover:bg-gray-100 w-full py-2 px-3 flex items-center">
                         <CgProfile className="mr-2" /> Profile
                     </Link>
                     <Link to="/saved" className="hover:bg-gray-100 w-full py-2 px-3 flex items-center">

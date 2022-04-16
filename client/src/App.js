@@ -4,6 +4,7 @@ import LoadingScreen from './pages/LoadingScreen'
 
 import Home from './pages/Home'
 import Login from './pages/Login'
+import Profile from './pages/Profile'
 
 const App = () => {
     const { isLoading, isAuthenticated } = useAuth0();
@@ -13,6 +14,7 @@ const App = () => {
     return(
         <Routes>
             <Route path="/" element={isAuthenticated ? <Home /> : <Login />} />
+            <Route path="/:userName" element={<Profile />} />
         </Routes>
     )
 }
