@@ -1,4 +1,5 @@
 import { AiFillHome, AiOutlineHeart } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 import { RiMessengerLine, RiCompass3Line } from 'react-icons/ri'
 import { FiPlusSquare } from 'react-icons/fi'
 import Search from './Search';
@@ -8,7 +9,9 @@ const Header = () => {
   return(
     <header className="p-4 border-b bg-white">
         <div className="flex max-w-4xl mx-auto justify-between items-center">
-          <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="logo" />  
+          <Link to="/">
+            <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="logo" />  
+          </Link>
           <Search />
           <div className="flex items-center">
             <AiFillHome size="1.6rem" className="mx-2" />

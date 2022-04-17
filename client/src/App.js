@@ -14,7 +14,7 @@ const App = () => {
     return(
         <Routes>
             <Route path="/" element={isAuthenticated ? <Home /> : <Login />} />
-            <Route path="/:userName" element={<Profile />} />
+            <Route path="/:userName/*" element={<Profile />} />
         </Routes>
     )
 }
